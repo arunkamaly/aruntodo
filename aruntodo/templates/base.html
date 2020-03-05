@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aruntodo</title>
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+</head>
+<body>
+    <main class="layout">
+
+        {% block body %}{% endblock %}
+
+        <!-- LOGIN -->
+        <!-- <div class="auth">
+            <h2>Login</h2>
+            <div class="input-wrap">
+                <label>Email</label>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-wrap">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+            <button class="btn-login">Submit</button>
+        </div> -->
+
+        <!-- SIGN UP -->
+        <!-- <div class="auth">
+            <h2>Sign up</h2>
+            <div class="input-wrap">
+                <label>Email</label>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-wrap">
+                <label>Confirm Email</label>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-wrap">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="input-wrap">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+             <button class="btn-login">Submit</button>
+        </div> -->
+
+        <!-- ADD TODO -->
+        <!-- <header>
+            <ul>
+                <li><a>Username</a></li>
+                <li><a>Logout</a></li>
+            </ul>
+        </header>
+        <div class="auth">
+            <h2>Add Todo</h2>
+            <div class="input-wrap">
+                <label>Suject</label>
+                <input type="text" placeholder="Subject">
+            </div>
+            <div class="input-wrap">
+                <label>Designation</label>
+                <input type="text" placeholder="Designation">
+            </div>
+            <div class="input-wrap">
+                <label>Date</label>
+                <input type="date" placeholder="Date">
+            </div>
+            <button class="btn-login">Submit</button>
+        </div> -->
+
+        <!-- LIST -->
+        {% comment %} <header>
+            <ul>
+                <li><a>Username</a></li>
+                <li><a>Logout</a></li>
+            </ul>
+        </header>
+        <div class="todo-list">
+            <ul>
+                <li><span>Name</span><span>Designation</span><span>Time</span><span><button>Delete</button><button>Edit</button></span></li>
+                <li><span>Name</span><span>Designation</span><span>Time</span><span><button>Delete</button><button>Edit</button></span></li>
+                <li><span>Name</span><span>Designation</span><span>Time</span><span><button>Delete</button><button>Edit</button></span></li>
+                <li><span>Name</span><span>Designation</span><span>Time</span><span><button>Delete</button><button>Edit</button></span></li>
+                <li><span>Name</span><span>Designation</span><span>Time</span><span><button>Delete</button><button>Edit</button></span></li>
+            </ul>
+        </div> {% endcomment %}
+
+
+
+    </main>
+</body>
+</html>

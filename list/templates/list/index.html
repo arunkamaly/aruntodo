@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+
+<div class="auth">
+<h2>Add Todo</h2>
+
+<form action="{% url 'list:index' %}" method=post>
+{% csrf_token %}
+<div class="input-wrap">
+    {{ form.title.errors }}
+    <label>{{ form.title.label_tag}}</label>
+    {{form.title}}
+</div>
+
+<div class="input-wrap">
+    {{ form.description.errors }}
+    <label>{{ form.description.label_tag}}</label>
+    {{form.description}}
+</div>
+
+<div class="input-wrap">
+    {{ form.finished_at.errors }}
+    <label>{{ form.finished_at.label_tag}}</label>
+    {{form.finished_at}}
+</div>
+<button class="btn-login">Submit</button>
+</form>
+
+{% comment %} <div class="input-wrap">
+    <label>Suject</label>
+    <input type="text" placeholder="Subject">
+</div>
+<div class="input-wrap">
+    <label>Designation</label>
+    <input type="text" placeholder="Designation">
+</div>
+<div class="input-wrap">
+    <label>Date</label>
+    <input type="date" placeholder="Date">
+</div> {% endcomment %}
+
+</div>
+{% endblock %}
