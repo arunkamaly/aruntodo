@@ -6,7 +6,7 @@
 <div class="auth">
 <h2>Add Todo</h2>
 
-<form action="{% url 'list:index' %}" method=post>
+<form  method=post>
 {% csrf_token %}
 <div class="input-wrap">
     {{ form.title.errors }}
@@ -21,14 +21,20 @@
 </div>
 
 <div class="input-wrap">
-    {{ form.target_time.errors }}
-    <label>{{ form.target_time.label_tag}}</label>
-    {{form.target_time}}
+    {{ form.target_at.errors }}
+    <label>{{ form.target_at.label_tag}}</label>
+    {{form.target_at}}
 </div>
+
+<div class="input-wrap">
+    {{ form.is_finished.errors }}
+    <label>{{ form.is_finished.label_tag}}</label>
+    {{form.is_finished}}
+</div>
+
+
 <button class="btn-login">Submit</button>
 </form>
-
-
 
 </div>
 {% endblock %}

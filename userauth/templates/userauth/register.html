@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block header %}{% endblock %}
+{% block body %}
+<div class="auth">
+    <h2>Login</h2>
+
+    <form action="{% url 'userauth:register' %}" method=post>
+    {% csrf_token %}
+    
+    <div class="input-wrap">
+        <label>{{error}}</label>
+        <label>{{ form.username.label_tag}}</label>
+        {{form.username}}
+    </div>
+
+    <div class="input-wrap">
+        {{ form.email.errors }}
+        <label>{{ form.email.label_tag}}</label>
+        {{form.email}}
+    </div>
+
+    <div class="input-wrap">
+        {{ form.password.errors }}
+        <label>{{ form.password.label_tag}}</label>
+        {{form.password}}
+    </div>
+
+    <div class="input-wrap">
+        {{ form.password_confirmation.errors }}
+        <label>{{ form.password_confirmation.label_tag}}</label>
+        {{form.password_confirmation}}
+    </div>
+
+    <button class="btn-login">Submit</button>
+    </form>
+    <label><a href="{% url 'userauth:login' %}">Login</a></label>
+   
+</div> 
+
+{% endblock %}

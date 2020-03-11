@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block header %}{% endblock %}
+{% block body %}
+<div class="auth">
+    <h2>Login</h2>
+
+    <form action="{% url 'userauth:login' %}" method=post>
+    {% csrf_token %}
+    
+    <div class="input-wrap">
+        <label>{{error}}</label>
+        <label>{{ form.username.label_tag}}</label>
+        {{form.username}}
+    </div>
+
+    <div class="input-wrap">
+        {{ form.password.errors }}
+        <label>{{ form.password.label_tag}}</label>
+        {{form.password}}
+    </div>
+    <button class="btn-login">Submit</button>
+    </form>
+    <label><a href="{% url 'userauth:register' %}">Register</a></label>
+   
+</div> 
+
+{% endblock %}

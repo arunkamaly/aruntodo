@@ -17,6 +17,14 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.description
+    
+    def save(self, *args, **kwargs):
+        if self.is_finished == False:
+            self.finished_at = None
+        else:
+            self.finished_at = timezone.now()
+        # self.save()
+        super(Todo, self).save(*args, **kwargs)
 
     def close(self):
         self.is_finished = True

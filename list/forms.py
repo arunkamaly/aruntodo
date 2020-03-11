@@ -1,5 +1,5 @@
 from django import forms
-
+from .models import *
 
 def widget_attrs(placeholder):
     return {'class':'input-wrap','placeholder': placeholder}
@@ -19,7 +19,7 @@ class TodoListForm(forms.Form):
         
     )
     description =  forms.CharField()
-    finished_at = forms.DateTimeField(
+    target_time = forms.DateTimeField(
         input_formats = ['%Y-%m-%dT%H:%M'],
         widget = forms.DateTimeInput(
             attrs={
@@ -28,3 +28,8 @@ class TodoListForm(forms.Form):
             format='%Y-%m-%dT%H:%M')
     )
   
+  
+class TodoForm(forms.ModelForm):
+   class Meta:
+       model = Todo
+       fields = ['title','description'] 

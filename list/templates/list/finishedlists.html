@@ -1,25 +1,21 @@
 
 {% extends "base.html" %}
-
-
 {% block body %}
-
 {% load static %}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-<script src="{% static 'list/js/list.js' %}"></script>
+
 
  <div class="todo-list">
     <ul>
-        <li><span>Name</span><span>Description</span><span>Target Time</span><span>Created At</span><span>Finished At</span> <span>Is Finished?</span><span>&nbsp;</span></li>
+        <li><span>Name</span><span>Description</span><span>Target Time</span><span>Created At</span><span>Finished At</span><span>&nbsp;</span></li>
         {%for list in lists %}
         <li id="{{ list.id }}"><span>{{list.title}}</span><span>{{list.description}}</span><span>{{list.target_at}}</span><span>{{list.created_at}}</span>
-        
         <span>{{list.finished_at}}</span>
-        <span><input type="checkbox" id="checkbox" data-todo-id="{{ list.id }}" ></span>
-        <span>
 
+         <span>
         
+        
+       
+
         <a href="{% url 'list:delete_todo'  list.id  %}"
         class="btn btn-primary btn-sm"
         role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
@@ -27,10 +23,8 @@
         <a href="{% url 'list:edit_todo'  list.id  %}"
             class="btn btn-primary btn-sm"
             role="button"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 
-
-        
-       
         </span>
+
         </li>
         {%endfor%}
 

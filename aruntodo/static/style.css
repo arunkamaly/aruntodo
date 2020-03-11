@@ -65,6 +65,8 @@ body{
 }
 
 header{
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,7 +77,8 @@ header{
 }
 
 header ul{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     color: white;
     margin: 0;
 }
@@ -89,6 +92,8 @@ header ul li a{
     display: block;
     padding: 0 1rem;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 
 .todo-list{
