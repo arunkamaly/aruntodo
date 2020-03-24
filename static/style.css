@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: Sans-Serif;
+}
+
+.layout{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.auth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+}
+
+.auth h2{
+    text-align: center;
+}
+
+.auth .input-wrap{
+    margin-bottom: 16px;
+}
+
+.auth .input-wrap label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.auth .input-wrap input{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0 16px;
+}
+
+.auth .btn-login{
+    display: block;
+    width: 100%;
+    height: 34px;
+    background-color: cadetblue;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+    background-color: cadetblue;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 0;
+}
+
+header ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header ul li a{
+    display: block;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.todo-list{
+    padding: 51px 1rem;
+}
+
+.todo-list ul {
+    padding: 0;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.todo-list ul li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #f9f9f9;
+    margin-bottom: 0.5rem;
+}
